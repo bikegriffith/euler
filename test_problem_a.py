@@ -1,12 +1,12 @@
 # vim:filetype=python:fileencoding=utf-8
 
-import math, operator, string
 import nose.tools as NT
 
 
 # Problem A
 # Find the greatest product of 3 consecutive two-digit numbers in the following
 # 1000 digit number:
+
 
 BIG_NUMBER = ''.join(x.strip() for x in """
     70428252483600823257530420752716362695618826963450

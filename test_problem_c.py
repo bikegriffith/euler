@@ -1,6 +1,5 @@
 # vim:filetype=python:fileencoding=utf-8
 
-import math, operator, string
 import nose.tools as NT
 
 
@@ -16,15 +15,12 @@ import nose.tools as NT
 # tree, return –1.
 # 3. Search for the integers 0 through 50, and output a file
 # binary_tree_results.txt with the results in the following format:
-#
+
 
 class TestProblemC(object):
 
     def setup(self):
         self.tree = btree_generate()
-
-    def teardown(self):
-        pass
 
     def test_solution_1(self):
         # Make sure we have all 14 nodes.  Don't have time to make this a super
@@ -42,8 +38,9 @@ class TestProblemC(object):
         NT.assert_equal(-1, find_depth(self.tree, 'missing'))
 
     def test_solution_3(self):
-        result = write_depth_report(self.tree, 'binary_tree_results.txt')
+        result = write_depth_report(self.tree, 'output/binary_tree_results.txt')
         NT.assert_true(result)
+
 
 class Node(object):
     # (I had just written this for another kata I was doing! Win!)
@@ -55,6 +52,7 @@ class Node(object):
 
     def __repr__(self):
         return 'Node("%s", "%s", "%s")' % (self.value, self.left, self.right)
+
 
 def btree_generate():
     tree = \
@@ -83,6 +81,7 @@ def btree_generate():
     print tree
     return tree
 
+
 def find_depth(node, value, current_depth = 0):
     # recursive search
     if node is None:
@@ -93,6 +92,7 @@ def find_depth(node, value, current_depth = 0):
     if result == -1:
         result = find_depth(node.right, value, current_depth + 1)
     return result
+
 
 def write_depth_report(tree, filename):
     with open(filename, 'w') as f:

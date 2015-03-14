@@ -1,6 +1,6 @@
 # vim:filetype=python:fileencoding=utf-8
 
-import math, operator, string
+import operator, string
 import nose.tools as NT
 
 
@@ -8,6 +8,7 @@ import nose.tools as NT
 # Given the list of domains in domains.txt, complete the following tasks:
 # 1. Output a file called tlds.txt that contains an alphabetical list of unique tlds in the domains list and the number of occurrences of each, separated by a colon. e.g:
 # 2. Assign each domain a score by assigning each letter a numerical value according to its position in the alphabet multiplied by its position in the domain and summing those values. Non-letter characters (such as numbers, hyphens, and periods) are worth nothing. For example:
+
 
 class TestProblemD(object):
 
