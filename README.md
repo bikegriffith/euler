@@ -8,7 +8,8 @@ To run samples:
     $ git clone https://github.com/bikegriffith/euler.git
     $ cd euler
     $ virtualenv .
-    $ pip install nose
+    $ . bin/activate
+    $ pip install nose requests
     $ nosetests
     .......
     ----------------------------------------------------------------------
